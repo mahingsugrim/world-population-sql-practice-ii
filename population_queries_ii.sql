@@ -26,3 +26,11 @@ JOIN population_years
   ON countries.id =
   population_years.country_id
 WHERE year = 2007;
+
+-- Q7 - What is the average population of Poland during the time period covered by this dataset?
+SELECT name, AVG(population) AS 'average population'
+FROM countries
+JOIN population_years
+  ON countries.id =
+  population_years.country_id
+WHERE name = 'Poland';
