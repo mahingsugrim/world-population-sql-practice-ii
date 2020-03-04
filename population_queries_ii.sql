@@ -34,3 +34,8 @@ JOIN population_years
   ON countries.id =
   population_years.country_id
 WHERE name = 'Poland';
+
+-- Q8 - How many countries have the word "The" in their name?
+SELECT name
+FROM countries
+WHERE name LIKE '%The%';
