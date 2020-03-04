@@ -18,3 +18,11 @@ LEFT JOIN population_years
   ON countries.id =
   population_years.country_id
 WHERE continent = 'South America' AND year = 2003;
+
+-- Q6 - What country had the smallest population in 2007?
+SELECT name, MIN(population) AS 'population in 2007'
+FROM countries
+JOIN population_years
+  ON countries.id =
+  population_years.country_id
+WHERE year = 2007;
