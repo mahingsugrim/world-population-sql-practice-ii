@@ -39,3 +39,12 @@ WHERE name = 'Poland';
 SELECT name
 FROM countries
 WHERE name LIKE '%The%';
+
+-- Q9 - What was the total population of each continent in 2010?
+SELECT continent, SUM(population) as 'Total population in 2010'
+FROM countries
+LEFT JOIN population_years
+  ON countries.id =
+  population_years.country_id
+WHERE year = 2010
+GROUP BY continent;
